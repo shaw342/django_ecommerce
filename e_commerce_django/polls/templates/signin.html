@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/css/signin.css">
 </head>
 <body>
+
+    <div id="container">
+        <div id="image">
+            <img src="/static/img/clem-onojeghuo-uK5jmdHO0G4-unsplash.jpg" alt="signin-image" width="300px" height="400px" id="img-back">
+        </div>
     <form action="/register" method="post">
-        <label for="">name :</label>
-        <input type="text" name="name" id="name">
-        <label for="">email :</label>
-        <input type="email" name="email" id="email">
-        <label for="">password :</label>
-        <input type="password" name="password" id="password">
-        <label for="">confirme your password</label>
-        <input type="password" name="password" id="confirm_password">
+        <div id="logo">
+            <h1>Signin</h1>
+            <img src="/static/img/Design_sans_titre_1_-removebg-preview.png" alt="image logo" height="70px" width="70px">
+        </div>
+        <input type="text" name="name" id="name" placeholder="">
+        <input type="email" name="email" id="email" placeholder="">
+        <select id="genre" name="genre">
+        <option value="fille">Fille</option>
+        <option value="garcon">Garçon</option>
+        </select>
+        <input type="password" name="password" id="password" placeholder="">
+        <input type="password" name="password" id="confirm_password" placeholder="confirme your password">
+        <input type="button" value="submit" id="submit">
     </form>
+    </div>
+    <script src="/static/js/signin.js"></script>
 </body>
 </html>
