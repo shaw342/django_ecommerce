@@ -1,16 +1,14 @@
 from django.db import models
-from pymongo import MongoClient
+from uuid import uuid4
 from pymongo.server_api import ServerApi
 import os
-class Models:
-    def connectionDatabase():
-        uri = os.getenv("MONGO_URL")
-        client = MongoClient(uri, server_api=ServerApi('1'))
-        db =  client["e_commerce_django"]
-        return db
+
+
+class User(models.Model):
+    id = models.UUIDField(primary_key=True,default = uuid4,editable = False)
+    name  = models.CharField(max_length = 100)
+    email = models.CharField(max_length = 100)
+    password = models.CharField(max_length = 100)
+    gender = models.CharField(max_length = 10)
     
-    def addCustomers(data):
-        db = Models.connectionDatabase()
-        Customers = db["Customers"]
-        Customers.insert_one(data)
-    
+

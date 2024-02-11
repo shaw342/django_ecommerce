@@ -12,7 +12,8 @@
         <div id="image">
             <img src="/static/img/clem-onojeghuo-uK5jmdHO0G4-unsplash.jpg" alt="signin-image" width="300px" height="400px" id="img-back">
         </div>
-    <form action="/register" method="post">
+    <form method="post">
+        {% csrf_token %}
         <div id="logo">
             <h1>Signin</h1>
             <img src="/static/img/Design_sans_titre_1_-removebg-preview.png" alt="image logo" height="70px" width="70px">
